@@ -23,4 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # keys
-/src/APIs/*
+/src
+/.APIs
+.main.js
+.projects.js
