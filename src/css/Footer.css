@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  padding: 0 20px;
+  background: black;
+  bottom: 0;
+  position: fixed;
+}
+
+.footerLinks {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding-right: 20px;
+}
