@@ -24,6 +24,5 @@ yarn-error.log*
 
 # keys
 /src
-/.APIs
-.main.js
-.projects.js
+/APIs/main.js
+/APIs/projects.js

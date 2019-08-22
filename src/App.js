@@ -18,20 +18,23 @@ class App extends React.Component {
     projectsData: []
   }
 
-  componentDidMount = async () => {
+  runAPIs = async () => {
     const mainsData = await mainsAT();
-    await this.setState(prevState => ({
-      mainsData: mainsData}));
-
     const projectsData = await projectsAT();
     await this.setState(prevState => ({
+      mainsData: mainsData,
       projectsData: projectsData}));
 
-    console.log('projects data:',this.state.projectsData);
+    console.log('projects data:',this.state.projectsData)
     console.log('main content', this.state.mainsData);
-  };
+  }
+
+  componentDidMount = () => {
+    this.runAPIs();
+  }
 
   render() {
+
     return (
       <div className="App">
       <Nav />

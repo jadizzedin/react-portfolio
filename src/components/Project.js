@@ -5,7 +5,7 @@ import React from 'react';
 
 const Project = (props) => {
 
-  console.log('TEST',props.data);
+  console.log('Project: ', props);
 
   const imageStyle = {
     background: `url(${props.data.fields.img})`,
@@ -24,7 +24,7 @@ const Project = (props) => {
             onClick={() => props.handleClick(props.data.fields.index, 'left')}
             ></button>
           <button className='button'
-            onClick={() => props.handleClick(props.data.fields.index, ' right')}
+            onClick={() => props.handleClick(props.data.fields.index, 'right')}
             ></button>
         </div>
         <div className='carousel-footer'>
