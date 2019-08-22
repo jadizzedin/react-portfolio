@@ -9,7 +9,7 @@ const Projects = (props) => {
   const [current, setCurrent] = useState(0);
   console.log(projects);
 
-
+  // TODO: change to moveIndex
   const showRight = () => setCurrent(current + 1)
   const showLeft = () => setCurrent(current - 1)
 
