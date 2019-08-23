@@ -4,17 +4,14 @@ import Project from './Project'
 import './../css/Projects.css'
 
 const Projects = (props) => {
-  console.log(props);
-  const [projects, setProjects] = useState(props.data)
+
   const [current, setCurrent] = useState(0);
-  console.log(projects);
+  const numP = props.data.length - 1
 
-  // TODO: change to moveIndex
-  const showRight = () => setCurrent(current + 1)
-  const showLeft = () => setCurrent(current - 1)
+  const showRight = () => setCurrent(current === numP ? 0 : current + 1)
+  const showLeft = () => setCurrent(current === 0 ? numP : current - 1)
 
-  const handleClick = (index, button) => {
-    console.log('clicked, returning index: ',index, button);
+  const handleClick = (button) => {
     if (button === 'right') {
       showRight();
     } else {
@@ -26,7 +23,6 @@ const Projects = (props) => {
     <React.Fragment>
       <h1>PROJECTS</h1>
       <div className='carousel-wrapper'>
-      {/*conditional rendering*/}
       {props.data.length ?
           <Project
           data={props.data[current]}
