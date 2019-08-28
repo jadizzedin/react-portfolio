@@ -18,8 +18,8 @@ class App extends React.Component {
   }
 
   runAPIs = async () => {
-    const mainsData = await mainsAT();
-    const projectsData = await projectsAT();
+    let mainsData = await mainsAT();
+    let projectsData = await projectsAT();
     await this.setState(prevState => ({
       mainsData: mainsData,
       projectsData: projectsData}));
